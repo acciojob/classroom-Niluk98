@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 public class StudentService {
-    @Autowired
-    StudentRepository studentRepository;
+//    @Autowired
+    StudentRepository studentRepository=new StudentRepository();
     public ResponseEntity<String> addStudent(Student student){
         studentRepository.addStudent(student);
         return new ResponseEntity<>("New student added successfully", HttpStatus.CREATED);
